@@ -1,0 +1,304 @@
+// Saidbar
+
+.saidbar {
+    padding: 52px 96px 163px 102px;
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    transition: all .5s ease;
+    color: $color-white;
+    background: $color-violet;
+
+    &__active {
+        padding-bottom: 59px;
+        transform: translate(-85%,0);
+        transition: all .5s ease;
+    }
+
+    &__header {
+        margin-bottom: 100px;
+        padding-right: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header-active {
+        margin-right: -65px;
+        padding-right: 0;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__logo-hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &__logo-small{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &__logo-small-active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__search {
+        padding-top: 15px;
+        
+        button {
+            border: none;
+            background: transparent;
+        }
+    }
+
+    &__search-active {
+        padding-top: 40px;
+        padding-right: 5px;
+    }
+}
+
+.filter {
+    &__box {
+        margin-bottom: 56px;
+        padding-right: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    &__btn {
+        padding-top: 20px;
+
+        button {
+            border: none;
+            background: transparent;
+        } 
+    }
+}
+
+.show {
+
+    &__btn {
+        position: absolute;
+        top: 190px;
+        right: -25px;
+        border: none;
+        background: transparent;
+    }
+
+    &__btn-active {
+        top:515px;
+    }
+}
+
+    
+
+.saidbar {
+    &__box {
+        margin-bottom: 30px;
+        padding-right: 70px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid rgba(158, 158, 220, 0.3);
+    }
+
+    &__title {
+        margin-bottom: 22px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__col {
+        div {
+            position: relative;
+            margin-bottom: 18px;
+            input {
+                margin-right: 5px;
+            }
+        }
+        &:first-child {
+            margin-right: 76px;
+        }
+    }
+}
+
+.readiness__box {
+    padding-right: 0px;
+}
+
+.radiobutton {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .radiobutton + label {
+    position: relative;
+    padding: 0 0 0 25px;
+    cursor: pointer;
+  }
+  .radiobutton + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+  }
+  .radiobutton + label:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-orange;
+    opacity: 0;
+    transition: .1s;
+  }
+
+  .radiobutton:checked + label::before {
+    border: 1px solid $color-orange;
+  }
+  .radiobutton:checked + label:after {
+    opacity: 1;
+  }
+
+.floors {
+
+    &__box {
+        padding-right: 70px;
+    }
+
+    &__form {
+        padding-top: 10px;
+        display: flex;
+        
+        div {
+            margin-right: 55px;
+        }
+    }
+}
+
+.floors__btn-1 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.floors__btn-1 + label {
+    padding: 10px 0 0 35px;
+    position: relative;
+    cursor: pointer;
+}
+.floors__btn-1 + label:before {
+    padding-top: 10px;
+    content: '1-5';
+    width: 93px;
+    height: 29px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    text-align: center;
+    border-radius: 30px;
+    background: #4F4FAD;
+}
+
+.floors__btn-1:checked + label::before {
+    background: $color-orange;
+}
+
+.floors__btn-2 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.floors__btn-2 + label {
+    padding: 10px 0 0 31px;
+    position: relative;
+    cursor: pointer;
+}
+.floors__btn-2 + label:before {
+    padding-top: 10px;
+    content: '5-10';
+    width: 93px;
+    height: 29px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    text-align: center;
+    border-radius: 30px;
+    background: #4F4FAD;
+}
+
+.floors__btn-2:checked + label::before {
+    background: $color-orange;
+}
+
+.floors__btn-3 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.floors__btn-3 + label {
+    padding: 10px 0 0 26px;
+    position: relative;
+    cursor: pointer;
+}
+.floors__btn-3 + label:before {
+    padding-top: 10px;
+    content: '10-20';
+    width: 93px;
+    height: 29px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    text-align: center;
+    border-radius: 30px;
+    background: #4F4FAD;
+}
+
+.floors__btn-3:checked + label::before {
+    background: $color-orange;
+}
+
+.floors__btn-4 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.floors__btn-4 + label {
+    padding: 10px 0 0 26px;
+    position: relative;
+    cursor: pointer;
+}
+.floors__btn-4 + label:before {
+    padding-top: 10px;
+    content: '20-40';
+    width: 93px;
+    height: 29px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    text-align: center;
+    border-radius: 30px;
+    background: #4F4FAD;
+}
+
+.floors__btn-4:checked + label::before {
+    background: $color-orange;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- End favicon -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- Main -->
+    <main class="main" id="main">
+        <div class="map" id="map"></div>
+        <nav class="nav" id="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <span>О проекте</span>
+                </li>
+                <li class="nav__item">
+                    <span>Блог</span>
+                </li>
+                <li class="nav__item">
+                    <span>Партнеры</span>
+                </li>
+            </ul>
+        </nav>
+        <section class="saidbar" id="saidbar">
+            <header class="saidbar__header" id="header">
+                <div class="saidbar__logo" id="js-logo">
+                    <img src="img/logo.png" alt="Logo">
+                </div>
+                <div class="saidbar__logo-small" id="js-logo-small">
+                    <img src="img/logo-small.png" alt="Logo">
+                </div>
+                <div class="saidbar__search" id="js-search-btn">
+                    <button>
+                        <img src="img/search.png" alt="Search">
+                    </button>
+                </div>
+            </header>
+            <div class="filter__box">
+                <h3 class="filter__title">Фильтр</h3>
+                <div class="filter__btn">
+                    <button>Очистить фильтр</button>
+                </div>
+            </div>
+            <button class="show__btn" id="js-show-btn">
+                <img src="img/btn.png" alt="button">
+            </button>
+            <div class="saidbar__box">
+                <h4 class="saidbar__title">Район</h4>
+                <form class="saidbar__form">
+                    <div class="saidbar__col">
+                        <div>
+                            <input type="radio" class="radiobutton" id="district-radio1" name="district"
+                                value="Суворовский">
+                            <label for="district-radio1">Суворовский</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="district-radio3" name="district"
+                                value="Киевский">
+                            <label for="district-radio3">Киевский</label>
+
+                        </div>
+                    </div>
+                    <div class="saidbar__col">
+                        <div>
+                            <input type="radio" class="radiobutton" id="district-radio2" name="district"
+                                value="Малиновский">
+                            <label for="district-radio2">Малиновский</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="district-radio4" name="district"
+                                value="Приморский">
+                            <label for="district-radio4">Приморский</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="saidbar__box">
+                <h4 class="saidbar__title">Строительная компания</h4>
+                <form class="saidbar__form">
+                    <div class="saidbar__col">
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio1" name="company"
+                                value="Парк Совиньон">
+                            <label for="company-radio1">Парк Совиньон</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio2" name="company" value="Будова">
+                            <label for="company-radio2">Будова</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio3" name="company"
+                                value="Демострой">
+                            <label for="company-radio3">Демострой</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio4" name="company"
+                                value="Демострой">
+                            <label for="company-radio4">Демострой</label>
+                        </div>
+                    </div>
+                    <div class="saidbar__col">
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio5" name="company" value="Кадорр">
+                            <label for="company-radio5">Кадорр</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio6" name="company" value="Авалон">
+                            <label for="company-radio6">Авалон</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio7" name="company"
+                                value="Скай Парк">
+                            <label for="company-radio7">Скай Парк</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="company-radio8" name="company"
+                                value="Скай Парк">
+                            <label for="company-radio8">Скай Парк</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="saidbar__box readiness__box">
+                <h4 class="saidbar__title">Готовность объекта</h4>
+                <form class="saidbar__form">
+                    <div class="saidbar__col">
+                        <div>
+                            <input type="radio" class="radiobutton" id="readiness-radio1" name="readiness"
+                                value="Сбор документов">
+                            <label for="readiness-radio1">Сбор документов</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="readiness-radio2" name="readiness"
+                                value="Котлован">
+                            <label for="readiness-radio2">Котлован</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="readiness-radio3" name="readiness"
+                                value="Цоколь">
+                            <label for="readiness-radio3">Цоколь</label>
+                        </div>
+                    </div>
+                    <div class="saidbar__col">
+                        <div>
+                            <input type="radio" class="radiobutton" id="readiness-radio4" name="readiness"
+                                value="Первые этажи">
+                            <label for="readiness-radio4">Первые этажи</label>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="readiness-radio5" name="readiness"
+                                value="Последние этажи">
+                            <label for="readiness-radio5">Последние этажи</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radiobutton" id="readiness-radio6" name="readiness"
+                                value="Объект сдан">
+                            <label for="readiness-radio6">Объект сдан</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="floors__box">
+                <h4 class="saidbar__title">Этажность</h4>
+                <form class="floors__form">
+                    <div>
+                        <input type="radio" class="floors__btn-1" id="floors-radio1" name="floors" value="1-5">
+                        <label class="floors__label-1" for="floors-radio1">1-5</label>
+
+                    </div>
+                    <div>
+                        <input type="radio" class="floors__btn-2" id="floors-radio2" name="floors" value="5-10">
+                        <label class="floors__label-2" for="floors-radio2">5-10</label>
+
+                    </div>
+                    <div>
+                        <input type="radio" class="floors__btn-3" id="floors-radio3" name="floors" value="10-20">
+                        <label class="floors__label-3" for="floors-radio3">10-20</label>
+
+                    </div>
+                    <div>
+                        <input type="radio" class="floors__btn-4" id="floors-radio4" name="floors" value="20-40">
+                        <label class="floors__label-4" for="floors-radio4">20-40</label>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- End Main -->
+    <!-- Popup -->
+    <div class="popup" id="marker-1">
+        <div class="popup__img">
+            <img src="img/image.png" alt="Photo">
+        </div>
+        <h5 class="popup__title">Новый берег</h5>
+        <div class="rating" id="js-rating" data-slide="4">
+            <button class="rating__btn" data-rate="1">
+                <i class="fas fa-star rating__star rating__star--active"></i>
+            </button>
+            <button class="rating__btn" data-rate="2">
+                <i class="fas fa-star rating__star rating__star--active"></i>
+            </button>
+            <button class="rating__btn" data-rate="3">
+                <i class="fas fa-star rating__star raiting__star--active"></i>
+            </button>
+            <button class="rating__btn" data-rate="4">
+                <i class="fas fa-star rating__star rating__star--active"></i>
+            </button>
+            <button class="rating__btn" data-rate="5">
+                <i class="fas fa-star rating__star rating__star--active"></i>
+            </button>
+        </div>
+        <p class="popup__description">
+            Жилой комплекс «Новый Берег» имеет 24 этажей (+тех. этаж) и обеспечен подземным паркингом.
+        </p>
+        <div class="popup__link">
+            <a href="#">Подробнее</a>
+        </div>
+        <div class="popup__logo">
+            <img src="img/logo-popup.png" alt="logo">
+        </div>
+        <button class="popup__close" id="popup-close">
+
+        </button>
+    </div>
+    <!-- End Popup -->
+
+    <!-- Scripts -->
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9gUZnQktDPI1eAyva-iPoO-FDV-gV2sY&callback=initMap"
+        defer>
+        </script>
+    <!-- JS -->
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
