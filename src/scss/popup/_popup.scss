@@ -1,8 +1,7 @@
 // Popup
 
 .popup {
-    display: none;
-    margin-top: 50px;
+    // display: none;
     padding: 20px;
     width: 383px;
     height: 591px;
@@ -12,6 +11,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    &-active {
+        display: block;
+    }
 
     &__img {
         margin-bottom: 28px;
