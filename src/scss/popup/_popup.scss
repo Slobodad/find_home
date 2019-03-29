@@ -1,37 +1,80 @@
 // Popup
 
-.popup {
-    // display: none;
+.gm-style-iw {
+    width: 383px;
+    height: 591px;
+    overflow: visible !important;
+    background-image: url('../img/popup_background.png');
+    background-position: center;
+    background-size: cover;
+
+    div {
+        overflow: visible !important;
+    }
+}
+
+.gm-style-iw-c {
+    top: 80px !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.0) !important;   
+    
+    
+}
+
+.gm-style-iw-t {
+    &::after {
+        display: none !important;
+    }
+}
+
+
+
+.popup     {
     padding: 20px;
     width: 383px;
     height: 591px;
     position: relative;
     color: $color-white;
-    background-image: url('../img/popup_background.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
-    &-active {
-        display: block;
+    div {
+        overflow: visible !important;
+        z-index: 1000;
     }
 
     &__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        z-index: 1000 !important;
         margin-bottom: 28px;
     }
 
     &__title {
         margin-bottom: 6px;
+        position: absolute;
+        top: 43%;
+        left: 8px;
         font-size: 18px;
         font-weight: 500;
     }
 
     &__description {
         margin-bottom: 16px;
+        width: 326px;
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        font-style: 16px !important;
         line-height: 19px;
     }
 
     &__link { 
+        position: absolute;
+        top: 58%;
+        left: 8px;
         a {
             font-size: 12px;
             text-decoration: none;
@@ -46,7 +89,7 @@
     &__logo {
         position: absolute;
         bottom: 80px;
-        left: 41.5%;
+        left: 38%;
         z-index: 10;
     }
 
@@ -54,12 +97,12 @@
         width: 27px;
         height: 27px;
         position: absolute;
-        top: -15px;
-        right: -25px;
-        // overflow: hidden;
+        top: -30px;
+        right: -15px;
         border: none;
         background: transparent;
-
+    
+        
         &::before {
             content: '';
             width: 40px;
@@ -86,9 +129,27 @@
     }
 }
 
+.gm-ui-hover-effect {
+    top: -30px !important;
+    right: -35px !important;
+    opacity: 0;
+
+    &:hover {
+        opacity: 0;
+    }
+}
+
+.rating {
+    position: absolute;
+    top: 47%;
+    left: 8px;
+}
+
 .rating__btn {
+    margin-right: 2px;
     margin-bottom: 10px;
     border: none;
+    font-size: 9px;
     color: $color-gold;
     background: transparent;
 }
